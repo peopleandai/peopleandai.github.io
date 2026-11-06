@@ -24,7 +24,7 @@
   </header>
   <div class="topic-body">
     <p class="topic-q">{{ tp.question | t | safe }}</p>
-    <p class="topic-sum">{{ tp.summary | t | safe }}</p>
+    {% if tp.summary %}<p class="topic-sum">{{ tp.summary | t | safe }}</p>{% endif %}
     <a class="text-link" href="/research/#{{ tp.id }}"><span class="l-ko">자세히 보기</span><span class="l-en">Learn more</span> <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
   </div>
 </article>
@@ -56,18 +56,10 @@
 {% endmacro %}
 
 {#- 소식 한 줄 -#}
-{%- set newsTags = {
-  paper:  {ko: "논문", en: "Paper"},
-  award:  {ko: "수상", en: "Award"},
-  member: {ko: "멤버", en: "Member"},
-  event:  {ko: "행사", en: "Event"},
-  lab:    {ko: "연구실", en: "Lab"}
-} %}
 {% macro newsItem(n) %}
 <li class="news-item">
   <time datetime="{{ n.date | isoDate }}">{{ n.date | fmtDate }}</time>
   <div class="news-body">
-    {% if n.tag %}<span class="news-tag tag-{{ n.tag }}">{{ (newsTags[n.tag] or n.tag) | t | safe }}</span>{% endif %}
     <p>{% if n.link %}<a href="{{ n.link }}">{{ n | t | safe }}</a>{% else %}{{ n | t | safe }}{% endif %}</p>
   </div>
 </li>

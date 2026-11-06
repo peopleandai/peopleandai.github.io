@@ -9,18 +9,18 @@
 # =====================================================================
 
 vision:
-  en: "We ask not only whether AI systems work, but also whether people can <em class='hl-y'>use them effectively</em>, <em class='hl-g'>build meaningful relationships</em> with them, and <em class='hl-r'>live well alongside them</em>."
-  ko: "AI가 ‘잘 작동하는가’를 넘어, 사람들이 AI를 잘 활용하고, 의미 있는 관계를 맺으며, 함께 잘 살아갈 수 있는가를 묻습니다."
+  ko: "<em class='hl-y'>사람과 조화롭게 협력하고</em> <em class='hl-g'>신뢰할 수 있으며</em> <em class='hl-r'>사회에 유익한</em> AI 기술을 개발합니다."
+  en: "We develop AI technologies that <em class='hl-y'>collaborate harmoniously with people</em>, <em class='hl-g'>are trustworthy</em>, and <em class='hl-r'>benefit society</em>."
 
 values:
   - icon: user
     color: yellow
     en: User Friendly
     ko: 사용 편의성
-  - icon: responsible
+  - icon: eye
     color: green
-    en: Responsible
-    ko: 책임성
+    en: Transparent
+    ko: 투명성
   - icon: heart
     color: red
     en: Trustworthy
@@ -35,29 +35,11 @@ values:
     ko: 공정성
 
 open_note:
-  ko: "이 밖에도 <strong>인간과 AI의 상호작용 경험에 관한 다양한 주제</strong>에 열려 있어요!"
-  en: "We are also open to <strong>many other topics on human–AI interaction experiences</strong>!"
+  ko: "이 밖에도 <strong>인간과 AI의 상호작용에 관한 다양한 주제</strong>에 열려 있어요!"
+  en: "We are also open to <strong>many other topics on human-AI interaction</strong>!"
 
+# 진행 중인 연구 4개: 카드에는 이름(name)과 한 문장 설명(question)이 나옵니다.
 topics:
-  - id: evaluation
-    status: ongoing
-    color: green
-    icon: clipboard
-    image: evaluation.jpg
-    name:
-      en: AI Evaluation
-      ko: AI 평가
-    question:
-      en: How can we align AI evaluations with human preferences?
-      ko: AI 평가를 사람의 선호와 어떻게 맞출 수 있을까요?
-    summary:
-      ko: AI 모델 평가에 인간의 선호와 판단을 어떻게 반영할 수 있을지 연구합니다.
-      en: We design human-in-the-loop, LLM-based evaluation methods and tools that help practitioners assess AI outputs in line with human judgment.
-    keywords: [LLM-as-a-Judge, Human-in-the-loop, Evaluation Tools]
-    links:
-      - label: EvalAssist
-        url: https://ibm.github.io/eval-assist/
-
   - id: hallucination
     status: ongoing
     color: red
@@ -65,14 +47,27 @@ topics:
     image: hallucination.jpg
     name:
       en: AI Hallucination & Trust
-      ko: AI 환각과 신뢰
+      ko: AI의 잘못된 정보 생성과 사용자의 신뢰 형성
     question:
-      en: How can interfaces help people calibrate their trust in AI, rather than over-relying on it?
-      ko: 사람들이 AI를 과신하지 않고 적절히 신뢰하도록 인터페이스가 어떻게 도울 수 있을까요?
-    summary:
+      en: How can we design interfaces that help people judge how much to trust AI when it generates inaccurate information?
       ko: AI가 사실과 다른 정보를 생성할 때, 사람들이 AI를 얼마나 신뢰해야 할지 판단하도록 돕는 인터페이스를 설계합니다.
-      en: We study how AI-generated information can be presented so that people understand uncertainty and factuality and calibrate their trust.
     keywords: [Factuality, Explainability, Trust Calibration, Over-reliance]
+
+  - id: evaluation
+    status: ongoing
+    color: green
+    icon: clipboard
+    image: evaluation.jpg
+    name:
+      en: AI Evaluation
+      ko: AI를 사용한 평가 시스템
+    question:
+      en: How can AI faithfully understand and reflect evaluators’ expertise and judgment criteria to deliver reliable data quality assessments?
+      ko: AI가 평가자의 전문성과 판단 기준을 충실하게 이해하고 반영하여, 신뢰할 수 있는 데이터 품질 평가를 수행하는 방법을 연구합니다.
+    keywords: [LLM-as-a-Judge, Human-in-the-loop, Evaluation Tools]
+    links:
+      - label: EvalAssist
+        url: https://ibm.github.io/eval-assist/
 
   - id: disclosure
     status: ongoing
@@ -81,13 +76,10 @@ topics:
     image: disclosure.jpg
     name:
       en: AI Disclosure
-      ko: AI 활용 공개
+      ko: AI 사용 여부 및 범위의 공개
     question:
-      en: When and how should AI involvement be communicated in AI-assisted work?
-      ko: AI가 함께 만든 작업물에서, AI 활용 사실을 언제 어떻게 알려야 할까요?
-    summary:
+      en: As the line between AI-generated and human-created work blurs, when and how should the use of AI be disclosed?
       ko: AI 생성물과 인간 창작물의 경계가 모호해지는 환경에서, AI 활용 사실을 언제, 어떻게 공개해야 하는지 연구합니다.
-      en: As AI-generated and human-made content become hard to tell apart, we investigate how AI use should be disclosed, and how ownership and accountability should be defined.
     keywords: [Transparency, Attribution, Ownership, Accountability]
     links:
       - label: CHIWORK '25 Workshop
@@ -105,10 +97,7 @@ topics:
       ko: AI 에이전트 설계
     question:
       en: How can people effectively oversee, understand, and stay in control of AI agents and their actions?
-      ko: 사람이 AI 에이전트의 행동을 효과적으로 감독하고, 이해하고, 통제하려면 어떻게 해야 할까요?
-    summary:
       ko: AI 에이전트의 행동을 사람이 어떻게 효과적으로 감독하고 이해하며 통제할 수 있을지 연구합니다.
-      en: We explore oversight, transparency, governance, and human control over agentic AI systems and their actions.
     keywords: [Human Oversight, Agent Governance, Human Control]
 
   - id: conversation
@@ -130,7 +119,7 @@ topics:
 build:
   title:
     en: What We Build
-    ko: 만드는 것
+    ko: 연구 결과물
   items:
     - en: Human-Centered AI Systems & Tools
       ko: 인간 중심 AI 시스템 및 도구

@@ -19,8 +19,8 @@ pi:
     ko: 도효진
     en: Hyo Jin Do
   title:
-    ko: 컴퓨터학부 조교수 · 연구실 책임자
-    en: Assistant Professor, Computer Science · Lab Director
+    ko: 컴퓨터학부 조교수
+    en: Assistant Professor, Computer Science
   photo: hyojin-do.jpg
   email: dohyojin@hanyang.ac.kr
   bio:
@@ -36,27 +36,21 @@ pi:
   career:
     - role: { ko: "조교수", en: "Assistant Professor" }
       org: { ko: "한양대학교 ERICA 컴퓨터학부", en: "Hanyang University ERICA" }
-      period: "2026 –"
       color: blue
     - role: { ko: "Applied Scientist", en: "Applied Scientist" }
       org: { ko: "Amazon AGI", en: "Amazon AGI" }
-      period: ""
       color: red
     - role: { ko: "Research Scientist", en: "Research Scientist" }
       org: { ko: "IBM Research (Human-Centered AI)", en: "IBM Research (Human-Centered AI)" }
-      period: ""
       color: green
     - role: { ko: "박사 (컴퓨터과학)", en: "Ph.D. in Computer Science" }
       org: { ko: "University of Illinois Urbana-Champaign (UIUC)", en: "University of Illinois Urbana-Champaign (UIUC)" }
-      period: "2023"
       color: yellow
     - role: { ko: "석사 (전산학)", en: "M.S. in Computer Science" }
       org: { ko: "KAIST", en: "KAIST" }
-      period: ""
       color: yellow
     - role: { ko: "학사 (컴퓨터학)", en: "B.S. in Computer Science" }
       org: { ko: "고려대학교", en: "Korea University" }
-      period: ""
       color: yellow
   links:
     - label: { ko: 개인 홈페이지, en: Personal Website }
@@ -65,8 +59,6 @@ pi:
       url: https://scholar.google.com/citations?user=C8sYLjMAAAAJ
     - label: LinkedIn
       url: https://www.linkedin.com/in/hyojindo
-    - label: Bluesky
-      url: https://bsky.app/profile/dohyojin.bsky.social
 
 groups:
   - id: phd

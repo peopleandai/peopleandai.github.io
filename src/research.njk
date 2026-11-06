@@ -23,7 +23,7 @@ title:
       <div>
         <h2 class="td-title"><span class="td-label bg-{{ tp.color }}"><svg class="ic" aria-hidden="true"><use href="#i-{{ tp.icon }}"/></svg></span>{{ tp.name | t | safe }}</h2>
         <p class="td-q">{{ tp.question | t | safe }}</p>
-        <p class="td-sum">{{ tp.summary | t | safe }}</p>
+        {% if tp.summary %}<p class="td-sum">{{ tp.summary | t | safe }}</p>{% endif %}
         {% if tp.keywords %}<div class="td-keywords">{% for k in tp.keywords %}<span>{{ k }}</span>{% endfor %}</div>{% endif %}
         {% if related.length %}
         <div class="td-pubs">
@@ -81,7 +81,7 @@ title:
         <header class="topic-head"><svg class="ic" aria-hidden="true"><use href="#i-{{ tp.icon }}"/></svg><h3>{{ tp.name | t | safe }}</h3></header>
         <div class="topic-body">
           <p class="topic-q">{{ tp.question | t | safe }}</p>
-          <p class="topic-sum">{{ tp.summary | t | safe }}</p>
+          {% if tp.summary %}<p class="topic-sum">{{ tp.summary | t | safe }}</p>{% endif %}
           <a class="text-link" href="/publications/#topic={{ tp.id }}"><span class="l-ko">관련 논문 보기</span><span class="l-en">Related papers</span> <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
         </div>
       </article>

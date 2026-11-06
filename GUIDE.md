@@ -201,6 +201,7 @@ summary:
 - 글꼴: Montserrat ExtraBold(800) — `src/assets/fonts/montserrat-*.woff2`, `style.css` 맨 위 `@font-face`
   - 다른 글꼴로 바꾸려면 `--font-logo`의 맨 앞 이름을 바꾸고, 글꼴 파일을 `fonts/`에 넣은 뒤 `@font-face`도 바꿉니다.
 - 크기: 헤더 `.brand {`, 푸터 `.footer-brand .wordmark {`, 홈 배너 `.hero-wordmark {`
+- 브라우저 탭 아이콘: `src/assets/img/favicon.svg` (네이비 바탕 + 블루 P). PNG(`favicon-32.png`, `apple-touch-icon.png`)는 이 SVG를 같은 모양으로 저장한 것이라, SVG를 바꾸면 PNG도 다시 만들어야 합니다.
 
 ---
 

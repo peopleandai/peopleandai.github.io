@@ -3,24 +3,16 @@
 #  홈 화면에는 최신 3개가 보입니다.
 #
 #  - date: 2027-03-02
-#    tag: paper          # paper | award | member | event | lab (색깔 라벨)
 #    ko: "한국어 내용"
 #    en: "English text"
 #    link: "https://..."  # (선택)
 # =====================================================================
 
 - date: 2026-11-01
-  tag: lab
-  ko: "PANDA Lab 홈페이지를 열었습니다! 👋"
-  en: "The PANDA Lab website is now live! 👋"
-
-- date: 2026-10-01
-  tag: member
-  ko: "학부연구생 · 석사과정 · 박사과정 학생을 모집합니다. 겨울방학 스터디도 함께해요!"
-  en: "We are recruiting undergraduate researchers, M.S., and Ph.D. students — join our winter-break study too!"
+  ko: "학부연구생 · 석사과정 학생을 모집합니다. 겨울방학 스터디도 함께해요!"
+  en: "We are recruiting undergraduate researchers and M.S. students — join our winter-break study too!"
   link: /join/
 
 - date: 2026-09-01
-  tag: lab
-  ko: "도효진 교수가 한양대학교 ERICA 컴퓨터학부 조교수로 부임했습니다."
-  en: "Prof. Hyo Jin Do joined Hanyang University ERICA as an Assistant Professor."
+  ko: "PANDA Lab이 설립되었습니다."
+  en: "PANDA Lab was founded."
