@@ -10,7 +10,7 @@
 
 vision:
   ko: "<em>사람과 조화롭게 협력하고</em> <em>신뢰할 수 있으며</em> <em>사회에 유익한</em> AI 기술을 개발합니다."
-  en: "We develop AI technologies that <em>collaborate harmoniously with people</em>, <em>are trustworthy</em>, and <em>benefit society</em>."
+  en: "We develop AI systems that <em>work harmoniously with people</em>, <em>earn their trust</em>, and <em>benefit society</em>."
 
 values:
   - icon: user
@@ -28,6 +28,9 @@ values:
   - icon: scale
     en: Fair
     ko: 공정성
+  - icon: shield
+    en: Safe
+    ko: 안전성
 
 open_note:
   ko: "이 밖에도 <strong>인간과 AI의 상호작용에 관한 다양한 주제</strong>에 열려 있어요!"

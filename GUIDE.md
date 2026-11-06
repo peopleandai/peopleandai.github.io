@@ -161,7 +161,7 @@ summary:
 | Hero (home) | 홈 상단 배너 |
 | Page hero | 서브페이지 상단 제목 띠 |
 | Sections | 섹션 제목, 카드 공통 |
-| Vision | 홈 화면 연구 분야 소개 (`.intro` 왼쪽 분야 이름 / 오른쪽 비전 문장, `.values` 핵심 가치 5개). 비전 문장에서 `<em>…</em>`으로 감싼 부분이 형광펜 밑줄로 강조됨 (`.intro-vision em`) |
+| Vision | 홈 화면 연구 분야 소개 (`.intro` 왼쪽 분야 이름 / 오른쪽 비전 문장, `.values` 핵심 가치 6개 — 데스크톱 6열 · 태블릿 3열 · 모바일 2열). 비전 문장에서 `<em>…</em>`으로 감싼 부분이 형광펜 밑줄로 강조됨 (`.intro-vision em`) |
 | News / Publications | 소식·논문 목록 |
 | Research page / People / Recruit / Join | 각 페이지 전용 |
 | Footer / 404 | 하단, 404 페이지 |

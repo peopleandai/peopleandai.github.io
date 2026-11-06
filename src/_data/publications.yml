@@ -170,10 +170,10 @@
 
 - title: Facilitating Human-LLM Collaboration through Factuality Scores and Source Attributions
   authors: Hyo Jin Do, Rachel Ostrand, Justin D. Weisz, Casey Dugan, Prasanna Sattigeri, Dennis Wei, Keerthiram Murugesan, Werner Geyer
-  venue: arXiv
-  venue_short: arXiv
+  venue: CHI 2024 Workshop on Trust and Reliance in Evolving Human-AI Workflows (TREW)
+  venue_short: CHI '24 Workshop
   year: 2024
-  type: preprint
+  type: workshop
   topics:
   - hallucination
   url: https://arxiv.org/abs/2405.20434
@@ -227,50 +227,3 @@
   topics:
   - conversation
   url: https://doi.org/10.1145/3397481.3450659
-
-- title: Computational methods for socio-computer interaction
-  authors: Wai Tat Fu, Mingkun Gao, Hyo Jin Do
-  venue: Computational Interaction (Oxford University Press)
-  venue_short: Book Chapter
-  year: 2018
-  type: chapter
-
-- title: Burst Your Bubble! An Intelligent System for Improving Awareness of Diverse Social Opinions
-  authors: Mingkun Gao, Hyo Jin Do, Wai-Tat Fu
-  venue: 23rd International Conference on Intelligent User Interfaces
-  venue_short: IUI '18
-  year: 2018
-  type: conference
-  url: https://doi.org/10.1145/3172944.3172970
-
-- title: Intelligent Interface for Seeing the World Through Different Lenses
-  authors: Hyo Jin Do
-  venue: Companion Proceedings of the 22nd International Conference on Intelligent User Interfaces
-  venue_short: IUI '17 Companion
-  year: 2017
-  type: conference
-  url: https://doi.org/10.1145/3030024.3040991
-
-- title: An Intelligent Interface for Organizing Online Opinions on Controversial Topics
-  authors: Mingkun Gao, Hyo Jin Do, Wai-Tat Fu
-  venue: 22nd International Conference on Intelligent User Interfaces
-  venue_short: IUI '17
-  year: 2017
-  type: conference
-  url: https://doi.org/10.1145/3025171.3025230
-
-- title: 'Analyzing emotions in twitter during a crisis: A case study of the 2015 Middle East Respiratory Syndrome outbreak in Korea'
-  authors: Hyo Jin Do, Chae-Gyun Lim, You Jin Kim, Ho-Jin Choi
-  venue: 2016 International Conference on Big Data and Smart Computing (BigComp)
-  venue_short: BigComp '16
-  year: 2016
-  type: conference
-  url: https://doi.org/10.1109/BIGCOMP.2016.7425960
-
-- title: Korean twitter emotion classification using automatically built emotion lexicons and fine-grained features
-  authors: Hyo Jin Do, Ho-Jin Choi
-  venue: '29th Pacific Asia Conference on Language, Information and Computation: Posters'
-  venue_short: PACLIC '15
-  year: 2015
-  type: conference
-  url: https://aclanthology.org/Y15-2017.pdf

@@ -23,16 +23,7 @@ pi:
     en: Assistant Professor, Computer Science
   photo: hyojin-do.jpg
   email: dohyojin@hanyang.ac.kr
-  bio:
-    ko: >-
-      인간-컴퓨터 상호작용(HCI)과 인공지능(AI)의 접점에서, 사람 중심의 AI 시스템을 설계·개발·평가하는 연구를 합니다.
-      사람과 AI의 상호작용과 사용자 경험을 개선하고, 과의존·편향과 같은 잠재적 위험을 줄이는 데 관심이 있습니다.
-      최근에는 AI 에이전트, 투명성, AI 평가, 대화형 상호작용을 주로 연구하고 있습니다.
-    en: >-
-      My research lies at the intersection of human-computer interaction (HCI) and artificial intelligence (AI).
-      I design, develop, and evaluate human-centered AI systems that enhance human-AI interaction, improve user experience,
-      and mitigate potential risks such as over-reliance and bias. My recent interests include AI agents, transparency,
-      evaluation, and conversational interactions.
+  phone: 031-400-1039
   career:
     - role: { ko: "조교수", en: "Assistant Professor" }
       org: { ko: "한양대학교 ERICA 컴퓨터학부", en: "Hanyang University ERICA" }

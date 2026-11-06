@@ -18,9 +18,12 @@ title:
       <div>
         <h2 class="pi-name">{{ pi.name | t | safe }}</h2>
         <p class="pi-title">{{ pi.title | t | safe }}</p>
-        <p class="pi-bio">{{ pi.bio | t | safe }}</p>
+        {% if pi.bio %}<p class="pi-bio">{{ pi.bio | t | safe }}</p>{% endif %}
         <div class="pi-links">
           <a href="mailto:{{ pi.email }}"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg>{{ pi.email }}</a>
+          {%- if pi.phone %}
+          <a href="tel:+82{{ pi.phone | replace("-", "") | replace(r/^0/, "") }}"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg>{{ pi.phone }}</a>
+          {%- endif %}
           {%- for l in pi.links %}
           <a href="{{ l.url }}" target="_blank" rel="noopener">{{ l.label | t | safe }} <svg class="ic" aria-hidden="true"><use href="#i-ext"/></svg></a>
           {%- endfor %}

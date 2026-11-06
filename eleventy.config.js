@@ -75,8 +75,6 @@ export default function (eleventyConfig) {
     topics.filter((t) => (t.status || "ongoing") === s)
   );
 
-  eleventyConfig.addFilter("findTopic", (topics = [], id) => topics.find((t) => t.id === id));
-
   eleventyConfig.addFilter("initials", (name) => {
     const n = typeof name === "object" ? name.en || name.ko : name;
     return String(n || "?")
