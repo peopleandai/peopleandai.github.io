@@ -27,6 +27,11 @@ field:
   ko: "인간-AI 상호작용"
   en: "Human-AI Interaction"
 
+# 푸터 연락처에 보이는 이름
+contact_name:
+  ko: 도효진
+  en: Hyo Jin Do
+
 email: dohyojin@hanyang.ac.kr
 
 office:

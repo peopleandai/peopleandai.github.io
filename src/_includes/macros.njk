@@ -1,19 +1,18 @@
 {#- ───────── 재사용 조각 (pages에서 {% import "macros.njk" as ui %} 로 사용) ───────── -#}
 
-{#- 페이지 상단 제목 띠 -#}
-{% macro pageHero(eyebrow, title, lead) %}
+{#- 페이지 상단 제목 띠: ui.pageHero({ko, en} 제목, {ko, en} 설명) -#}
+{% macro pageHero(title, lead) %}
 <section class="page-hero">
   <div class="container">
-    <p class="eyebrow">{{ eyebrow | t | safe }}</p>
     <h1 class="page-title">{{ title | t | safe }}</h1>
     {% if lead %}<p class="page-lead">{{ lead | t | safe }}</p>{% endif %}
   </div>
 </section>
 {% endmacro %}
 
-{#- 포스터 스타일 섹션 제목 탭 -#}
+{#- 섹션 제목: ui.secTab("한국어 제목", "English title") — 선택한 언어만 보임 -#}
 {% macro secTab(ko, en, id) %}
-<h2 class="sec-tab"{% if id %} id="{{ id }}"{% endif %}><span class="sec-ko">{{ ko }}</span> <span class="sec-en">{{ en }}</span></h2>
+<h2 class="sec-tab"{% if id %} id="{{ id }}"{% endif %}><span class="l-ko">{{ ko }}</span><span class="l-en">{{ en }}</span></h2>
 {% endmacro %}
 
 {#- 연구 주제 카드 (홈 화면) -#}
@@ -21,8 +20,7 @@
 <article class="topic-card c-{{ tp.color }}">
   <header class="topic-head">
     <svg class="ic" aria-hidden="true"><use href="#i-{{ tp.icon }}"/></svg>
-    <h3>{{ tp.name.en }}</h3>
-    <span class="topic-ko">{{ tp.name.ko }}</span>
+    <h3>{{ tp.name | t | safe }}</h3>
   </header>
   <div class="topic-body">
     <p class="topic-q">{{ tp.question | t | safe }}</p>
@@ -48,9 +46,9 @@
     </p>
     {% if p.url or p.pdf or p.code %}
     <p class="pub-links">
-      {% if p.url %}<a href="{{ p.url }}" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-ext"/></svg>Paper</a>{% endif %}
+      {% if p.url %}<a href="{{ p.url }}" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-ext"/></svg><span class="l-ko">논문</span><span class="l-en">Paper</span></a>{% endif %}
       {% if p.pdf %}<a href="{{ p.pdf }}" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg>PDF</a>{% endif %}
-      {% if p.code %}<a href="{{ p.code }}" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-code"/></svg>Code</a>{% endif %}
+      {% if p.code %}<a href="{{ p.code }}" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-code"/></svg><span class="l-ko">코드</span><span class="l-en">Code</span></a>{% endif %}
     </p>
     {% endif %}
   </div>
@@ -58,11 +56,18 @@
 {% endmacro %}
 
 {#- 소식 한 줄 -#}
+{%- set newsTags = {
+  paper:  {ko: "논문", en: "Paper"},
+  award:  {ko: "수상", en: "Award"},
+  member: {ko: "멤버", en: "Member"},
+  event:  {ko: "행사", en: "Event"},
+  lab:    {ko: "연구실", en: "Lab"}
+} %}
 {% macro newsItem(n) %}
 <li class="news-item">
   <time datetime="{{ n.date | isoDate }}">{{ n.date | fmtDate }}</time>
   <div class="news-body">
-    {% if n.tag %}<span class="news-tag tag-{{ n.tag }}">{{ n.tag }}</span>{% endif %}
+    {% if n.tag %}<span class="news-tag tag-{{ n.tag }}">{{ (newsTags[n.tag] or n.tag) | t | safe }}</span>{% endif %}
     <p>{% if n.link %}<a href="{{ n.link }}">{{ n | t | safe }}</a>{% else %}{{ n | t | safe }}{% endif %}</p>
   </div>
 </li>
@@ -77,7 +82,7 @@
   <span class="member-photo member-initials" aria-hidden="true">{{ m.name | initials }}</span>
   {% endif %}
   <h3 class="member-name">{{ m.name | t | safe }}</h3>
-  {% if m.since %}<p class="member-since">since {{ m.since }}</p>{% endif %}
+  {% if m.since %}<p class="member-since"><span class="l-ko">{{ m.since }}년~</span><span class="l-en">since {{ m.since }}</span></p>{% endif %}
   {% if m.now %}<p class="member-since">→ {{ m.now | t | safe }}</p>{% endif %}
   {% if m.interests %}<p class="member-int">{{ m.interests | t | safe }}</p>{% endif %}
   {% if m.email or m.website %}
@@ -94,12 +99,10 @@
 <aside class="recruit-box">
   <div>
     <p class="recruit-title"><span class="l-ko">함께할 학생을 찾습니다</span><span class="l-en">We're recruiting!</span></p>
-    <p class="recruit-pos"><span class="l-ko">학부연구생 · 석사과정 · 박사과정 모집</span><span class="l-en">Undergraduate researchers, M.S., and Ph.D. students</span></p>
-    <p class="recruit-sub"><span class="l-ko">관심 있는 학생은 편하게 연락 주세요! 커피챗도 환영해요 ☕</span><span class="l-en">Interested? Email me — coffee chats welcome! ☕</span></p>
+    <p class="recruit-pos"><span class="l-ko">학부연구생 · 석사과정 모집</span><span class="l-en">Undergraduate researchers and M.S. students</span></p>
   </div>
   <div class="recruit-actions">
     <a class="btn btn-navy" href="/join/"><span class="l-ko">자세히 보기</span><span class="l-en">Learn more</span> <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-    <a class="recruit-mail" href="mailto:{{ site.email }}">{{ site.email }}</a>
   </div>
 </aside>
 {% endmacro %}

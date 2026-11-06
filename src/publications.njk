@@ -7,7 +7,7 @@ title:
   en: Publications
 ---
 {% import "macros.njk" as ui %}
-{{ ui.pageHero({ko: "Publications", en: "Publications"}, {ko: "논문", en: "Publications"}, {ko: "PANDA Lab과 도효진 교수의 연구 논문입니다. 주제별로 골라 볼 수 있어요.", en: "Papers by PANDA Lab and Prof. Hyo Jin Do. Filter by topic below."}) }}
+{{ ui.pageHero({ko: "논문", en: "Publications"}, {ko: "PANDA Lab과 도효진 교수의 연구 논문입니다. 주제별로 골라 볼 수 있어요.", en: "Papers by PANDA Lab and Prof. Hyo Jin Do. Filter by topic below."}) }}
 
 {%- set pubs = publications | sortPubs %}
 <section class="section">
@@ -20,10 +20,10 @@ title:
       {%- endfor %}
     </div>
     <p class="pub-legend">
-      <span style="--c: var(--teal)">Conference</span>
-      <span style="--c: var(--charcoal)">Journal</span>
-      <span style="--c: var(--taupe)">Workshop · Chapter</span>
-      <span style="--c: var(--mist)">Preprint</span>
+      <span class="leg-conference"><span class="l-ko">학회</span><span class="l-en">Conference</span></span>
+      <span class="leg-journal"><span class="l-ko">저널</span><span class="l-en">Journal</span></span>
+      <span class="leg-workshop"><span class="l-ko">워크숍 · 책 챕터</span><span class="l-en">Workshop · Chapter</span></span>
+      <span class="leg-preprint"><span class="l-ko">프리프린트</span><span class="l-en">Preprint</span></span>
     </p>
 
     {%- for y in pubs | pubYears %}
@@ -35,7 +35,7 @@ title:
     </div>
     {%- endfor %}
 
-    <p class="sec-note" style="margin-top:40px">
+    <p class="sec-note sec-note-end">
       <span class="l-ko">전체 목록은</span><span class="l-en">For the full list, see</span>
       <a href="https://scholar.google.com/citations?user=C8sYLjMAAAAJ" target="_blank" rel="noopener">Google Scholar</a>.
     </p>

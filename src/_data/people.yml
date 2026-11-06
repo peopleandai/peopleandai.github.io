@@ -59,7 +59,7 @@ pi:
       period: ""
       color: yellow
   links:
-    - label: Personal Website
+    - label: { ko: 개인 홈페이지, en: Personal Website }
       url: https://dohyojin.github.io/
     - label: Google Scholar
       url: https://scholar.google.com/citations?user=C8sYLjMAAAAJ

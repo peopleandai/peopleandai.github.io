@@ -7,7 +7,7 @@ title:
   en: People
 ---
 {% import "macros.njk" as ui %}
-{{ ui.pageHero({ko: "People", en: "People"}, {ko: "구성원", en: "People"}, {ko: "PANDA Lab을 함께 만들어 가는 사람들입니다.", en: "The people who make PANDA Lab."}) }}
+{{ ui.pageHero({ko: "구성원", en: "People"}, {ko: "PANDA Lab을 함께 만들어 가는 사람들입니다.", en: "The people who make PANDA Lab."}) }}
 
 {%- set pi = people.pi %}
 <section class="section">
@@ -16,13 +16,13 @@ title:
     <article class="card pi">
       <div class="pi-photo"><img src="/assets/img/people/{{ pi.photo }}" alt="{{ pi.name.en }}" width="600" height="708"></div>
       <div>
-        <h2 class="pi-name">{{ pi.name.ko }}<small>{{ pi.name.en }}</small></h2>
+        <h2 class="pi-name">{{ pi.name | t | safe }}</h2>
         <p class="pi-title">{{ pi.title | t | safe }}</p>
         <p class="pi-bio">{{ pi.bio | t | safe }}</p>
         <div class="pi-links">
           <a href="mailto:{{ pi.email }}"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg>{{ pi.email }}</a>
           {%- for l in pi.links %}
-          <a href="{{ l.url }}" target="_blank" rel="noopener">{{ l.label }} <svg class="ic" aria-hidden="true"><use href="#i-ext"/></svg></a>
+          <a href="{{ l.url }}" target="_blank" rel="noopener">{{ l.label | t | safe }} <svg class="ic" aria-hidden="true"><use href="#i-ext"/></svg></a>
           {%- endfor %}
         </div>
         <div class="timeline">

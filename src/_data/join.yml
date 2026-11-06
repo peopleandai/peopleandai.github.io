@@ -11,12 +11,10 @@ positions:
     en: Undergraduate Researchers
   - ko: 석사과정
     en: M.S. Students
-  - ko: 박사과정
-    en: Ph.D. Students
 
 intro:
-  ko: "사람과 AI의 관계에 관심 있는 학생이라면 누구든 환영합니다. 관심 있는 학생은 편하게 연락 주세요! 커피챗도 환영해요 ☕"
-  en: "If you are curious about people and AI, we'd love to hear from you. Interested? Email me — coffee chats welcome! ☕"
+  ko: "사람과 AI의 관계에 관심 있는 학생이라면 누구든 환영합니다."
+  en: "If you are curious about people and AI, we'd love to hear from you."
 
 highlights:
   - icon: study
