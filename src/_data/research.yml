@@ -9,28 +9,23 @@
 # =====================================================================
 
 vision:
-  ko: "<em class='hl-y'>사람과 조화롭게 협력하고</em> <em class='hl-g'>신뢰할 수 있으며</em> <em class='hl-r'>사회에 유익한</em> AI 기술을 개발합니다."
-  en: "We develop AI technologies that <em class='hl-y'>collaborate harmoniously with people</em>, <em class='hl-g'>are trustworthy</em>, and <em class='hl-r'>benefit society</em>."
+  ko: "<em>사람과 조화롭게 협력하고</em> <em>신뢰할 수 있으며</em> <em>사회에 유익한</em> AI 기술을 개발합니다."
+  en: "We develop AI technologies that <em>collaborate harmoniously with people</em>, <em>are trustworthy</em>, and <em>benefit society</em>."
 
 values:
   - icon: user
-    color: yellow
     en: User Friendly
     ko: 사용 편의성
   - icon: eye
-    color: green
     en: Transparent
     ko: 투명성
   - icon: heart
-    color: red
     en: Trustworthy
     ko: 신뢰성
   - icon: bulb
-    color: blue
     en: Explainable
     ko: 설명 가능성
   - icon: scale
-    color: navy
     en: Fair
     ko: 공정성
 
@@ -81,11 +76,6 @@ topics:
       en: As the line between AI-generated and human-created work blurs, when and how should the use of AI be disclosed?
       ko: AI 생성물과 인간 창작물의 경계가 모호해지는 환경에서, AI 활용 사실을 언제, 어떻게 공개해야 하는지 연구합니다.
     keywords: [Transparency, Attribution, Ownership, Accountability]
-    links:
-      - label: CHIWORK '25 Workshop
-        url: https://chiwork-aidisclosure.github.io/
-      - label: AI Attribution Toolkit
-        url: https://aiattribution.github.io/
 
   - id: agent
     status: ongoing
@@ -101,7 +91,7 @@ topics:
     keywords: [Human Oversight, Agent Governance, Human Control]
 
   - id: conversation
-    status: past
+    status: ongoing
     color: yellow
     icon: chat
     image: conversation.jpg
@@ -110,36 +100,6 @@ topics:
       ko: 대화형 에이전트와 인터페이스
     question:
       en: How can conversational agents improve communication and collaboration?
-      ko: 대화형 에이전트는 어떻게 소통과 협업을 도울 수 있을까요?
-    summary:
-      ko: 그룹 대화를 돕는 대화형 에이전트, 자연어 인터페이스의 그라운딩(grounding) 등 사람과 AI의 대화 경험을 설계해 왔습니다.
-      en: We have designed conversational agents that facilitate group discussions and natural-language interfaces that ground human-AI collaboration.
+      ko: 그룹 대화를 돕는 대화형 에이전트, 자연어 인터페이스의 그라운딩(grounding) 등 사람과 AI의 대화 경험을 설계합니다.
     keywords: [Conversational Agents, Group Chat, Natural Language Interfaces]
 
-build:
-  title:
-    en: What We Build
-    ko: 연구 결과물
-  items:
-    - en: Human-Centered AI Systems & Tools
-      ko: 인간 중심 AI 시스템 및 도구
-    - en: Datasets
-      ko: 데이터셋
-    - en: User Interfaces
-      ko: 유저 인터페이스
-    - en: Prototypes & Designs
-      ko: 프로토타입 & 디자인
-
-methods:
-  title:
-    en: Research Methods
-    ko: 연구 방법
-  items:
-    - en: User Studies
-      ko: 유저 스터디
-    - en: Participatory Design
-      ko: 참여형 디자인
-    - en: Behavioral Experiments
-      ko: 행동 실험
-    - en: Interviews & Surveys
-      ko: 인터뷰 & 설문조사

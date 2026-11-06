@@ -13,35 +13,18 @@ positions:
     en: M.S. Students
 
 intro:
-  ko: "사람과 AI의 관계에 관심 있는 학생이라면 누구든 환영합니다."
-  en: "If you are curious about people and AI, we'd love to hear from you."
-
-highlights:
-  - icon: study
-    title: { ko: "겨울방학 스터디", en: "Winter-break study" }
-    text:
-      ko: "겨울방학 동안 HCI·인간-AI 상호작용 스터디를 함께할 학생을 모집합니다. 학기 중 연구 참여도 가능해요."
-      en: "Join our winter-break study on HCI and human-AI interaction. Research during the semester is also welcome."
-  - icon: people
-    title: { ko: "이런 학생을 환영해요", en: "Who we're looking for" }
-    text:
-      ko: "AI를 ‘사람의 입장’에서 고민해 보고 싶은 학생, 개발·디자인·사용자 연구 중 하나라도 해 보고 싶은 학생이라면 충분합니다."
-      en: "Students who want to think about AI from people's perspective, and are excited to build, design, or study how people use it."
-  - icon: flask
-    title: { ko: "함께 하는 일", en: "What you'll do" }
-    text:
-      ko: "AI 시스템과 인터페이스를 직접 만들고, 유저 스터디와 실험으로 검증하며, HCI·AI 학회 논문으로 발표합니다."
-      en: "Build AI systems and interfaces, evaluate them through user studies and experiments, and publish at HCI and AI venues."
+  ko: "인간중심 AI와 HCI 연구에 관심 있는 학생을 찾습니다."
+  en: "We are looking for motivated students interested in human-centered AI and HCI to join our lab."
 
 apply:
-  title: { ko: "연락하는 방법", en: "How to reach out" }
+  title: { ko: "지원하는 방법", en: "How to Apply" }
   text:
-    ko: "아래 내용을 간단히 적어 이메일로 보내 주세요. 형식은 자유입니다."
-    en: "Send a short email that covers the following. Any format is fine."
+    ko: "아래 내용을 간단히 적어 이메일(<a href=\"mailto:dohyojin@hanyang.ac.kr\">dohyojin@hanyang.ac.kr</a>)로 보내 주세요."
+    en: "Please send a short email (<a href=\"mailto:dohyojin@hanyang.ac.kr\">dohyojin@hanyang.ac.kr</a>) covering the following."
   items:
-    - ko: "본인 소개와 배경 (전공, 들은 과목, 해 본 프로젝트나 경험)"
-      en: "Your background (major, relevant coursework, projects or experience)"
-    - ko: "원하는 참여 형태 (학부연구생, 대학원 진학, 캡스톤, 개별연구 등)"
-      en: "What you are looking for (undergraduate research, graduate study, capstone, independent study, etc.)"
-    - ko: "관심 있는 연구 주제 (아직 없어도 괜찮아요!)"
-      en: "Research topics you're interested in (it's okay if you don't have one yet!)"
+    - ko: "본인 소개와 배경 (전공, 관련 경험이나 과목)"
+      en: "A brief introduction and background (major, relevant experience or coursework)"
+    - ko: "원하는 참여 형태 (학부연구생, 대학원 진학, 캡스톤, 개별연구 등)와 시기 (방학, 학기 중 등)"
+      en: "How you would like to participate (undergraduate research, graduate study, capstone, independent study, etc.) and when (school break, during the semester, etc.)"
+    - ko: "관심 있는 연구 주제 (선택 사항)"
+      en: "Research topics you are interested in (optional)"

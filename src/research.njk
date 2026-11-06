@@ -3,11 +3,11 @@ layout: base.njk
 permalink: /research/
 pageClass: research
 title:
-  ko: 연구
-  en: Research
+  ko: 프로젝트
+  en: Projects
 ---
 {% import "macros.njk" as ui %}
-{{ ui.pageHero({ko: "연구", en: "Research"}, research.vision) }}
+{{ ui.pageHero({ko: "프로젝트", en: "Projects"}) }}
 
 <section class="section">
   <div class="container">
@@ -44,27 +44,8 @@ title:
     {%- endfor %}
 
     <div class="card open-card">
-      <img src="/assets/img/research/more.jpg" alt="" loading="lazy" width="800" height="533">
       <div>
         <h3>{{ research.open_note | t | safe }}</h3>
-        <p><span class="l-ko">관심 있는 주제가 있다면 편하게 이야기해 주세요.</span><span class="l-en">Have an idea? We'd love to hear it.</span>
-          <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section section-alt">
-  <div class="container">
-    {{ ui.secTab("만드는 것 · 연구 방법", "How We Work") }}
-    <div class="card pills-grid">
-      <div>
-        <p class="pills-title t-build">{{ research.build.title | t | safe }}</p>
-        <ul class="pills">{% for i in research.build.items %}<li class="chip p-build">{{ i | t | safe }}</li>{% endfor %}</ul>
-      </div>
-      <div>
-        <p class="pills-title t-methods">{{ research.methods.title | t | safe }}</p>
-        <ul class="pills">{% for i in research.methods.items %}<li class="chip p-methods">{{ i | t | safe }}</li>{% endfor %}</ul>
       </div>
     </div>
   </div>

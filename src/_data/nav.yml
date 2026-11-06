@@ -3,12 +3,12 @@
 - url: /
   ko: 홈
   en: Home
-- url: /research/
-  ko: 연구
-  en: Research
 - url: /people/
   ko: 구성원
   en: People
+- url: /research/
+  ko: 프로젝트
+  en: Projects
 - url: /publications/
   ko: 논문
   en: Publications

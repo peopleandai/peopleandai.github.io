@@ -125,7 +125,7 @@ summary:
 | `--footer-*` | | 푸터 배경·글자 |
 | `--logo-1` / `-2` / `-3` | 선명한 블루 `#0474C4` / 중간 블루 `#5379AE` / 딥 블루 `#06457F` | 로고 **P**(People) / **AND** / **A**(AI). |
 | `--logo-footer-*` | `#5AA7E6` / `#A8C4EC` / `#7FA3DB` | 네이비 푸터 위 로고 색 (밝은 블루) |
-| `--hl-blue` `--hl-clay` `--hl-sage` `--hl-sand` `--hl-plum` | 블루 / 테라코타 / 세이지 / 샌드 / 플럼 | **포인트 5색** — 핵심 가치 아이콘, 연구 카드 윗선, 로고 |
+| `--hl-blue` `--hl-clay` `--hl-sage` `--hl-sand` `--hl-plum` | 블루 / 테라코타 / 세이지 / 샌드 / 플럼 | **포인트 5색** — 프로젝트 페이지 연구 주제 색 |
 | `--c-navy` … `--c-red` | 위 포인트 5색에 연결 | yml의 `color:` 값 (위 2-3) |
 
 예) 하이라이트를 더 진한 샌드로: `--tint: #C9A57C;`
@@ -135,7 +135,7 @@ summary:
 | 바꾸고 싶은 것 | 찾을 곳 (Cmd+F로 검색) | 바꿀 값 |
 |---|---|---|
 | 모서리 둥글기 | `--radius` | `8px` → `0`(각진) / `16px`(더 둥글게) |
-| 전체 폭 | `--container` | `1120px` |
+| 전체 폭 | `--container` | `75vw` (화면 너비의 75%. 고정 폭으로 하려면 `1120px`처럼 숫자로) |
 | 본문 글꼴 | `--font` | 맨 앞 글꼴 이름 |
 | 홈 배너 로고 크기 | `.hero-wordmark {` | `clamp(최소, 화면비례, 최대)` |
 | 배너 높이 | `.hero {` 의 `height` | `clamp(420px, 42.4vw, 640px)` (최소 420px, 화면 폭의 42.4% = 사진 원래 비율, 최대 640px) |
@@ -161,7 +161,7 @@ summary:
 | Hero (home) | 홈 상단 배너 |
 | Page hero | 서브페이지 상단 제목 띠 |
 | Sections | 섹션 제목, 카드 공통 |
-| Vision / Topic cards / Build / methods | 홈 화면 블록들 |
+| Vision | 홈 화면 연구 분야 소개 (`.intro` 왼쪽 분야 이름 / 오른쪽 비전 문장, `.values` 핵심 가치 5개). 비전 문장에서 `<em>…</em>`으로 감싼 부분이 형광펜 밑줄로 강조됨 (`.intro-vision em`) |
 | News / Publications | 소식·논문 목록 |
 | Research page / People / Recruit / Join | 각 페이지 전용 |
 | Footer / 404 | 하단, 404 페이지 |
