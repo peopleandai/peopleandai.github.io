@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://panda.hanyang.ac.kr/sitemap.xml
