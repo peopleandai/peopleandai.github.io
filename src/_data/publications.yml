@@ -1,0 +1,276 @@
+# =====================================================================
+#  논문 목록 (Publications)
+# ---------------------------------------------------------------------
+#  새 논문 추가: 아래 형식의 블록 하나를 복사해서 목록 맨 위에 붙여넣고 수정하세요.
+#  (연도별로 자동 정렬되므로 순서는 크게 신경 쓰지 않아도 됩니다.)
+#
+#  - title: "논문 제목"
+#    authors: "Hyo Jin Do, Coauthor Name"   # site.yml의 highlight_authors 이름은 자동으로 굵게 표시
+#    venue: "CHI Conference on Human Factors in Computing Systems"
+#    venue_short: "CHI '27"                  # 왼쪽 배지에 보이는 짧은 이름
+#    year: 2027
+#    type: conference                        # conference | journal | workshop | preprint | chapter
+#    topics: [evaluation]                    # research.yml의 id (evaluation, hallucination, disclosure, agent, conversation)
+#    url: "https://doi.org/..."              # 논문 링크 (없으면 줄 삭제)
+#    pdf: "/assets/papers/xxx.pdf"           # (선택) PDF 링크 — src/assets/papers/ 폴더에 파일을 넣으세요
+#    code: "https://github.com/..."          # (선택) 코드/데모 링크
+#    award: "Best Paper Award"               # (선택) 수상 내역
+#    lab: true                               # (선택) PANDA Lab 논문이면 true → 'PANDA Lab' 배지
+# =====================================================================
+
+- title: 'Overcoming Barriers to AI Disclosure: The Role of Granularity and Sociocultural Enablers in Reducing Perceived Stigmas'
+  authors: Jessica He, Avinash Akella, Hyo Jin Do, Justin D. Weisz
+  venue: 2026 ACM Conference on Fairness, Accountability, and Transparency
+  venue_short: FAccT '26
+  year: 2026
+  type: conference
+  topics:
+  - disclosure
+  url: https://doi.org/10.1145/3805689.3806737
+
+- title: 'MultEval: Supporting Collaborative Alignment for LLM-as-a-Judge Evaluation Criteria'
+  authors: Charles Chiang, Simret Gebreegziabher, Annalisa Szymanski, Hyo Jin Do, Zahra Ashktorab, Werner Geyer, Toby Jia-Jun Li, Diego Gomez-Zara
+  venue: 5th Annual Symposium on Human-Computer Interaction for Work
+  venue_short: CHIWORK '26
+  year: 2026
+  type: conference
+  topics:
+  - evaluation
+  url: https://doi.org/10.1145/3808045.3808093
+
+- title: '"Better Ask for Forgiveness than Permission": Practices and Policies of AI Disclosure in Freelance Work'
+  authors: Angel Hsing-Chi Hwang, Senya Wong, Baixiao Chen, Jessica He, Hyo Jin Do
+  venue: 2026 CHI Conference on Human Factors in Computing Systems
+  venue_short: CHI '26
+  year: 2026
+  type: conference
+  topics:
+  - disclosure
+  url: https://doi.org/10.1145/3772318.3791920
+
+- title: 'The Behavioral Fabric of LLM-Powered GUI Agents: Human Values and Interaction Outcomes'
+  authors: Simret Araya Gebreegziabher, Yukun Yang, Charles Chiang, Hojun Yoo, Chaoran Chen, Hyo Jin Do, Zahra Ashktorab, Werner Geyer, Diego Gómez-Zará, Toby Jia-Jun Li
+  venue: 31st International Conference on Intelligent User Interfaces
+  venue_short: IUI '26
+  year: 2026
+  type: conference
+  topics:
+  - agent
+  url: https://doi.org/10.1145/3742413.3789219
+
+- title: 'Generate, Evaluate, Iterate: Synthetic Data for Human-in-the-Loop Refinement of LLM Judges'
+  authors: Hyo Jin Do, Zahra Ashktorab, Jasmina Gajcin, Erik Miehling, Martín Santillán Cooper, Qian Pan, Elizabeth M. Daly, Werner Geyer
+  venue: arXiv preprint
+  venue_short: arXiv
+  year: 2025
+  type: preprint
+  topics:
+  - evaluation
+  url: https://arxiv.org/abs/2511.04478
+
+- title: 'Synthetic Data for Evaluation: Supporting LLM-as-a-Judge Workflows with EvalAssist'
+  authors: Martín Santillán Cooper, Zahra Ashktorab, Hyo Jin Do, Erik Miehling, Werner Geyer, Jasmina Gajcin, Elizabeth M. Daly, Qian Pan, Michael Desmond
+  venue: '2025 Conference on Empirical Methods in Natural Language Processing: System Demonstrations'
+  venue_short: EMNLP '25 Demo
+  year: 2025
+  type: conference
+  topics:
+  - evaluation
+  url: https://aclanthology.org/2025.emnlp-demos.1/
+
+- title: 'EvalAssist: Insights on Task-Specific Evaluations and AI-Assisted Judgment Strategy Preferences'
+  authors: Zahra Ashktorab, Michael Desmond, Qian Pan, James M. Johnson, Martin Santillán Cooper, Elizabeth M. Daly, Rahul Nair, Tejaswini Pedapati, Hyo Jin Do, Werner Geyer
+  venue: 38th Annual ACM Symposium on User Interface Software and Technology
+  venue_short: UIST '25
+  year: 2025
+  type: conference
+  topics:
+  - evaluation
+  url: https://doi.org/10.1145/3746059.3747740
+
+- title: 'Hide or Highlight: Understanding the Impact of Factuality Expression on User Trust'
+  authors: Hyo Jin Do, Werner Geyer
+  venue: Eighth AAAI/ACM Conference on Artificial Intelligence, Ethics and Society (AIES 2025)
+  venue_short: AIES '25
+  year: 2025
+  type: conference
+  topics:
+  - hallucination
+  url: https://ojs.aaai.org/index.php/AIES/article/view/36589
+
+- title: 'Highlight All the Phrases: Enhancing LLM Transparency through Visual Factuality Indicators'
+  authors: Hyo Jin Do, Rachel Ostrand, Werner Geyer, Keerthiram Murugesan, Dennis Wei, Justin Weisz
+  venue: Eighth AAAI/ACM Conference on Artificial Intelligence, Ethics and Society (AIES 2025)
+  venue_short: AIES '25
+  year: 2025
+  type: conference
+  topics:
+  - hallucination
+  url: https://ojs.aaai.org/index.php/AIES/article/view/36588
+
+- title: Multi-Level Explanations for Generative Language Models
+  authors: Lucas Monteiro Paes, Dennis Wei, Hyo Jin Do, Hendrik Strobelt, Ronny Luss, Amit Dhurandhar, Manish Nagireddy, Karthikeyan Natesan Ramamurthy, Prasanna Sattigeri, Werner Geyer, Soumya Ghosh
+  venue: '63rd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)'
+  venue_short: ACL '25
+  year: 2025
+  type: conference
+  topics:
+  - hallucination
+  url: https://doi.org/10.18653/v1/2025.acl-long.1553
+
+- title: Navigating Generative AI Disclosure, Ownership, and Accountability in Co-Creative Domains
+  authors: Hyo Jin Do, Molly Q Feldman, Jessica He, Angel Hsing-Chi Hwang, Seyun Kim
+  venue: Adjunct Proceedings of the 4th Annual Symposium on Human-Computer Interaction for Work
+  venue_short: CHIWORK '25
+  year: 2025
+  type: workshop
+  topics:
+  - disclosure
+  url: https://chiwork-aidisclosure.github.io/
+
+- title: Understanding Industry Practitioners' Experiences in Generative AI Governance
+  authors: Hyo Jin Do, Swati Babbar, Wenjing Li, Laura Walks, Shayenna Misko
+  venue: Extended Abstracts of the CHI Conference on Human Factors in Computing Systems
+  venue_short: CHI EA '25
+  year: 2025
+  type: conference
+  topics:
+  - agent
+  url: https://doi.org/10.1145/3706599.3720275
+
+- title: Exploring Industry Practices and Perspectives on AI Attribution in Co-Creative Use Cases
+  authors: Jessica He, Hyo Jin Do
+  venue: Joint Proceedings of the ACM IUI Workshops 2025 (HAI-GEN)
+  venue_short: IUI '25 Workshop
+  year: 2025
+  type: workshop
+  topics:
+  - disclosure
+  url: https://ceur-ws.org/Vol-3957/HAI-GEN-paper02.pdf
+
+- title: 'Grounding with Structure: Exploring Design Variations of Grounded Human-AI Collaboration in a Natural Language Interface'
+  authors: Hyo Jin Do, Michelle Brachman, Casey Dugan, James M. Johnson, Julia Lauer, Priyanshu Rai, Qian Pan
+  venue: Proceedings of the ACM on Human-Computer Interaction (CSCW)
+  venue_short: CSCW '24
+  year: 2024
+  type: journal
+  topics:
+  - conversation
+  url: https://doi.org/10.1145/3686902
+
+- title: 'Evaluating What Others Say: The Effect of Accuracy Assessment in Shaping Mental Models of AI Systems'
+  authors: Hyo Jin Do, Michelle Brachman, Casey Dugan, Qian Pan, Priyanshu Rai, James M. Johnson, Roshni Thawani
+  venue: Proceedings of the ACM on Human-Computer Interaction (CSCW)
+  venue_short: CSCW '24
+  year: 2024
+  type: journal
+  topics:
+  - hallucination
+  url: https://doi.org/10.1145/3686912
+
+- title: Facilitating Human-LLM Collaboration through Factuality Scores and Source Attributions
+  authors: Hyo Jin Do, Rachel Ostrand, Justin D. Weisz, Casey Dugan, Prasanna Sattigeri, Dennis Wei, Keerthiram Murugesan, Werner Geyer
+  venue: arXiv
+  venue_short: arXiv
+  year: 2024
+  type: preprint
+  topics:
+  - hallucination
+  url: https://arxiv.org/abs/2405.20434
+
+- title: 'Inform, Explain, or Control: Techniques to Adjust End-User Performance Expectations for a Conversational Agent Facilitating Group Chat Discussions'
+  authors: Hyo Jin Do, Ha-Kyung Kong, Pooja Tetali, Karrie Karahalios, Brian P. Bailey
+  venue: Proceedings of the ACM on Human-Computer Interaction (CSCW)
+  venue_short: CSCW '23
+  year: 2023
+  type: journal
+  topics:
+  - conversation
+  url: https://doi.org/10.1145/3610192
+
+- title: 'To Err is AI: Imperfect Interventions and Repair in a Conversational Agent Facilitating Group Chat Discussions'
+  authors: Hyo Jin Do, Ha-Kyung Kong, Pooja Tetali, Jaewook Lee, Brian P. Bailey
+  venue: Proceedings of the ACM on Human-Computer Interaction (CSCW)
+  venue_short: CSCW '23
+  year: 2023
+  type: journal
+  topics:
+  - conversation
+  url: https://doi.org/10.1145/3579532
+
+- title: 'Follow the Successful Herd: Towards Explanations for Improved Use and Mental Models of Natural Language Systems'
+  authors: Michelle Brachman, Qian Pan, Hyo Jin Do, Casey Dugan, Arunima Chaudhary, James M. Johnson, Priyanshu Rai, Tathagata Chakraborti, Thomas Gschwind, Jim A Laredo, Christoph Miksovic, Paolo Scotton, Kartik Talamadupula, Gegi Thomas
+  venue: 28th International Conference on Intelligent User Interfaces
+  venue_short: IUI '23
+  year: 2023
+  type: conference
+  topics:
+  - conversation
+  url: https://doi.org/10.1145/3581641.3584088
+
+- title: How Should the Agent Communicate to the Group? Communication Strategies of a Conversational Agent in Group Chat Discussions
+  authors: Hyo Jin Do, Ha-Kyung Kong, Jaewook Lee, Brian P. Bailey
+  venue: Proceedings of the ACM on Human-Computer Interaction (CSCW)
+  venue_short: CSCW '22
+  year: 2022
+  type: journal
+  topics:
+  - conversation
+  url: https://doi.org/10.1145/3555112
+
+- title: Do You Have Time for a Quick Chat? Designing a Conversational Interface for Sexual Harassment Prevention Training
+  authors: Hyo Jin Do, Seon Hye Yang, Boo-Gyoung Choi, Wayne T. Fu, Brian P. Bailey
+  venue: 26th International Conference on Intelligent User Interfaces
+  venue_short: IUI '21
+  year: 2021
+  type: conference
+  topics:
+  - conversation
+  url: https://doi.org/10.1145/3397481.3450659
+
+- title: Computational methods for socio-computer interaction
+  authors: Wai Tat Fu, Mingkun Gao, Hyo Jin Do
+  venue: Computational Interaction (Oxford University Press)
+  venue_short: Book Chapter
+  year: 2018
+  type: chapter
+
+- title: Burst Your Bubble! An Intelligent System for Improving Awareness of Diverse Social Opinions
+  authors: Mingkun Gao, Hyo Jin Do, Wai-Tat Fu
+  venue: 23rd International Conference on Intelligent User Interfaces
+  venue_short: IUI '18
+  year: 2018
+  type: conference
+  url: https://doi.org/10.1145/3172944.3172970
+
+- title: Intelligent Interface for Seeing the World Through Different Lenses
+  authors: Hyo Jin Do
+  venue: Companion Proceedings of the 22nd International Conference on Intelligent User Interfaces
+  venue_short: IUI '17 Companion
+  year: 2017
+  type: conference
+  url: https://doi.org/10.1145/3030024.3040991
+
+- title: An Intelligent Interface for Organizing Online Opinions on Controversial Topics
+  authors: Mingkun Gao, Hyo Jin Do, Wai-Tat Fu
+  venue: 22nd International Conference on Intelligent User Interfaces
+  venue_short: IUI '17
+  year: 2017
+  type: conference
+  url: https://doi.org/10.1145/3025171.3025230
+
+- title: 'Analyzing emotions in twitter during a crisis: A case study of the 2015 Middle East Respiratory Syndrome outbreak in Korea'
+  authors: Hyo Jin Do, Chae-Gyun Lim, You Jin Kim, Ho-Jin Choi
+  venue: 2016 International Conference on Big Data and Smart Computing (BigComp)
+  venue_short: BigComp '16
+  year: 2016
+  type: conference
+  url: https://doi.org/10.1109/BIGCOMP.2016.7425960
+
+- title: Korean twitter emotion classification using automatically built emotion lexicons and fine-grained features
+  authors: Hyo Jin Do, Ho-Jin Choi
+  venue: '29th Pacific Asia Conference on Language, Information and Computation: Posters'
+  venue_short: PACLIC '15
+  year: 2015
+  type: conference
+  url: https://aclanthology.org/Y15-2017.pdf

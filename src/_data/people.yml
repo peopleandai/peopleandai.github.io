@@ -1,0 +1,86 @@
+# =====================================================================
+#  구성원 (People)
+#  - pi: 지도교수 정보
+#  - groups: 학생 그룹. 멤버가 한 명도 없는 그룹은 화면에 나타나지 않습니다.
+#
+#  학생 추가 예시 (해당 그룹의 members 아래에 붙여넣기):
+#      - name: { ko: 홍길동, en: Gildong Hong }
+#        photo: gildong.jpg            # src/assets/img/people/ 에 사진 넣기 (없으면 이니셜 아이콘)
+#        since: 2027
+#        interests: { ko: "AI 에이전트, 신뢰", en: "AI agents, trust" }
+#        email: gildong@hanyang.ac.kr  # (선택)
+#        website: https://...          # (선택)
+#
+#  졸업생은 alumni 그룹으로 옮기고 now: { ko: "OO 회사", en: "OO Inc." } 를 추가하세요.
+# =====================================================================
+
+pi:
+  name:
+    ko: 도효진
+    en: Hyo Jin Do
+  title:
+    ko: 컴퓨터학부 조교수 · 연구실 책임자
+    en: Assistant Professor, Computer Science · Lab Director
+  photo: hyojin-do.jpg
+  email: dohyojin@hanyang.ac.kr
+  bio:
+    ko: >-
+      인간-컴퓨터 상호작용(HCI)과 인공지능(AI)의 접점에서, 사람 중심의 AI 시스템을 설계·개발·평가하는 연구를 합니다.
+      사람과 AI의 상호작용과 사용자 경험을 개선하고, 과의존·편향과 같은 잠재적 위험을 줄이는 데 관심이 있습니다.
+      최근에는 AI 에이전트, 투명성, AI 평가, 대화형 상호작용을 주로 연구하고 있습니다.
+    en: >-
+      My research lies at the intersection of human-computer interaction (HCI) and artificial intelligence (AI).
+      I design, develop, and evaluate human-centered AI systems that enhance human-AI interaction, improve user experience,
+      and mitigate potential risks such as over-reliance and bias. My recent interests include AI agents, transparency,
+      evaluation, and conversational interactions.
+  career:
+    - role: { ko: "조교수", en: "Assistant Professor" }
+      org: { ko: "한양대학교 ERICA 컴퓨터학부", en: "Hanyang University ERICA" }
+      period: "2026 –"
+      color: blue
+    - role: { ko: "Applied Scientist", en: "Applied Scientist" }
+      org: { ko: "Amazon AGI", en: "Amazon AGI" }
+      period: ""
+      color: red
+    - role: { ko: "Research Scientist", en: "Research Scientist" }
+      org: { ko: "IBM Research (Human-Centered AI)", en: "IBM Research (Human-Centered AI)" }
+      period: ""
+      color: green
+    - role: { ko: "박사 (컴퓨터과학)", en: "Ph.D. in Computer Science" }
+      org: { ko: "University of Illinois Urbana-Champaign (UIUC)", en: "University of Illinois Urbana-Champaign (UIUC)" }
+      period: "2023"
+      color: yellow
+    - role: { ko: "석사 (전산학)", en: "M.S. in Computer Science" }
+      org: { ko: "KAIST", en: "KAIST" }
+      period: ""
+      color: yellow
+    - role: { ko: "학사 (컴퓨터학)", en: "B.S. in Computer Science" }
+      org: { ko: "고려대학교", en: "Korea University" }
+      period: ""
+      color: yellow
+  links:
+    - label: Personal Website
+      url: https://dohyojin.github.io/
+    - label: Google Scholar
+      url: https://scholar.google.com/citations?user=C8sYLjMAAAAJ
+    - label: LinkedIn
+      url: https://www.linkedin.com/in/hyojindo
+    - label: Bluesky
+      url: https://bsky.app/profile/dohyojin.bsky.social
+
+groups:
+  - id: phd
+    title: { ko: 박사과정, en: Ph.D. Students }
+    members: []
+  - id: ms
+    title: { ko: 석사과정, en: M.S. Students }
+    members: []
+  - id: undergrad
+    title: { ko: 학부연구생, en: Undergraduate Researchers }
+    members: []
+  - id: intern
+    title: { ko: 연구 인턴, en: Research Interns }
+    members: []
+  - id: alumni
+    title: { ko: 졸업생, en: Alumni }
+    members: []

@@ -1,0 +1,43 @@
+---
+layout: base.njk
+permalink: /publications/
+pageClass: publications
+title:
+  ko: 논문
+  en: Publications
+---
+{% import "macros.njk" as ui %}
+{{ ui.pageHero({ko: "Publications", en: "Publications"}, {ko: "논문", en: "Publications"}, {ko: "PANDA Lab과 도효진 교수의 연구 논문입니다. 주제별로 골라 볼 수 있어요.", en: "Papers by PANDA Lab and Prof. Hyo Jin Do. Filter by topic below."}) }}
+
+{%- set pubs = publications | sortPubs %}
+<section class="section">
+  <div class="container">
+    <div class="filters" role="group" aria-label="Filter by topic">
+      <button class="filter" type="button" data-filter="all" aria-pressed="true"><span class="l-ko">전체</span><span class="l-en">All</span><span class="count">{{ pubs.length }}</span></button>
+      {%- for tp in research.topics %}
+      {%- set n = (pubs | byTopic(tp.id)).length %}
+      {% if n %}<button class="filter" type="button" data-filter="{{ tp.id }}" aria-pressed="false">{{ tp.name | t | safe }}<span class="count">{{ n }}</span></button>{% endif %}
+      {%- endfor %}
+    </div>
+    <p class="pub-legend">
+      <span style="--c: var(--teal)">Conference</span>
+      <span style="--c: var(--charcoal)">Journal</span>
+      <span style="--c: var(--taupe)">Workshop · Chapter</span>
+      <span style="--c: var(--mist)">Preprint</span>
+    </p>
+
+    {%- for y in pubs | pubYears %}
+    <div class="year-group">
+      <h2 class="year-label">{{ y }}</h2>
+      <ul class="pub-list">
+        {%- for p in pubs | byYear(y) %}{{ ui.pub(p, site.highlight_authors) }}{% endfor %}
+      </ul>
+    </div>
+    {%- endfor %}
+
+    <p class="sec-note" style="margin-top:40px">
+      <span class="l-ko">전체 목록은</span><span class="l-en">For the full list, see</span>
+      <a href="https://scholar.google.com/citations?user=C8sYLjMAAAAJ" target="_blank" rel="noopener">Google Scholar</a>.
+    </p>
+  </div>
+</section>

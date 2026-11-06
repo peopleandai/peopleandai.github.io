@@ -1,0 +1,45 @@
+# =====================================================================
+#  사이트 기본 정보 — 연구실 이름, 연락처, 링크 등
+#  ko / en 두 언어를 같이 적으면 오른쪽 위 KO/EN 버튼으로 전환됩니다.
+# =====================================================================
+
+name: PANDA Lab
+full_name: People AND AI Lab
+url: "https://panda.hanyang.ac.kr"   # 실제 공개 주소 (검색엔진·공유 미리보기용)
+
+tagline:
+  ko: "사람과 AI가 함께 잘 살아가는 방법을 연구합니다"
+  en: "Researching how people and AI can live well together"
+
+description:
+  ko: "한양대학교 ERICA 컴퓨터학부 PANDA Lab(People AND AI Lab)은 인간-AI 상호작용(Human-AI Interaction)을 연구합니다."
+  en: "PANDA Lab (People AND AI Lab) at Hanyang University ERICA studies human-AI interaction."
+
+university:
+  ko: "한양대학교 ERICA"
+  en: "Hanyang University ERICA"
+
+department:
+  ko: "컴퓨터학부"
+  en: "Computer Science"
+
+field:
+  ko: "인간-AI 상호작용"
+  en: "Human-AI Interaction"
+
+email: dohyojin@hanyang.ac.kr
+
+office:
+  ko: "약학관 615호"
+  en: "Room 615, College of Pharmacy Bldg."
+
+address:
+  ko: "경기도 안산시 상록구 한양대학로 55, 한양대학교 ERICA"
+  en: "55 Hanyangdaehak-ro, Sangnok-gu, Ansan, Gyeonggi-do, Republic of Korea"
+
+# 논문 목록에서 굵게 표시할 이름 (랩 멤버가 생기면 추가하세요)
+highlight_authors:
+  - Hyo Jin Do
+
+# 학생 모집 배너 on/off (모집이 끝나면 false)
+recruiting: true

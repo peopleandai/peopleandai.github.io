@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ko" data-lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {%- set pageTitle = (title | tk("en")) %}
+  <title>{% if pageTitle and page.url != "/" %}{{ pageTitle }} · {% endif %}{{ site.name }} · {{ site.full_name }}</title>
+  <meta name="description" content="{{ (description or site.description) | tk('en') }} {{ site.description | tk('ko') }}">
+  <meta name="theme-color" content="#14285a">
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ site.name }}">
+  <meta property="og:title" content="{% if pageTitle and page.url != '/' %}{{ pageTitle }} · {% endif %}{{ site.name }} — {{ site.full_name }}">
+  <meta property="og:description" content="{{ site.description | tk('ko') }}">
+  <meta property="og:image" content="{{ site.url }}/assets/img/og-image.jpg">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+  <script>
+    // 언어 설정: 저장된 값 → 브라우저 언어 → 한국어 순서로 결정 (화면 깜빡임 방지를 위해 head에서 실행)
+    (function () {
+      var lang = null;
+      try { lang = localStorage.getItem("panda-lang"); } catch (e) {}
+      if (lang !== "ko" && lang !== "en") {
+        var nav = (navigator.language || "ko").toLowerCase();
+        lang = nav.indexOf("ko") === 0 ? "ko" : "en";
+      }
+      document.documentElement.setAttribute("data-lang", lang);
+      document.documentElement.setAttribute("lang", lang);
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="preload" href="/assets/fonts/fredoka-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body class="page-{{ pageClass or 'default' }}">
+  {% include "partials/icons.njk" %}
+  <a class="skip-link" href="#main">
+    <span class="l-ko">본문 바로가기</span><span class="l-en">Skip to content</span>
+  </a>
+
+  {% include "partials/header.njk" %}
+
+  <main id="main">
+    {{ content | safe }}
+  </main>
+
+  {% include "partials/footer.njk" %}
+
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

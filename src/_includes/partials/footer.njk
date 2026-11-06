@@ -1,0 +1,26 @@
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      {% include "partials/wordmark.njk" %}
+      <p class="footer-full">{{ site.full_name }}</p>
+      <p class="footer-sub">{{ site.university | t | safe }} · {{ site.department | t | safe }}</p>
+    </div>
+    <div class="footer-col">
+      <h2 class="footer-h"><span class="l-ko">연락처</span><span class="l-en">Contact</span></h2>
+      <p><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg> <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+      <p><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg> <span>{{ site.office | t | safe }}<br>{{ site.address | t | safe }}</span></p>
+    </div>
+    <div class="footer-col">
+      <h2 class="footer-h"><span class="l-ko">바로가기</span><span class="l-en">Explore</span></h2>
+      <ul class="footer-links">
+        {%- for item in nav %}{% if item.url != "/" %}
+        <li><a href="{{ item.url }}">{{ item | t | safe }}</a></li>
+        {%- endif %}{% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© {{ buildYear }} PANDA Lab · People AND AI Lab</span>
+    <span>{{ site.university | tk("en") | upper }}</span>
+  </div>
+</footer>

@@ -1,0 +1,93 @@
+---
+layout: base.njk
+permalink: /research/
+pageClass: research
+title:
+  ko: 연구
+  en: Research
+---
+{% import "macros.njk" as ui %}
+{{ ui.pageHero({ko: "Research", en: "Research"}, {ko: "연구", en: "Research"}, research.vision) }}
+
+<section class="section">
+  <div class="container">
+    <div class="sec-head">
+      {{ ui.secTab("진행 중인 연구", "Ongoing Research") }}
+      <p class="sec-note">{{ research.open_note | t | safe }}</p>
+    </div>
+
+    {%- for tp in research.topics | whereStatus("ongoing") %}
+    {%- set related = (publications | sortPubs | byTopic(tp.id)).slice(0, 4) %}
+    <article class="card topic-detail" id="{{ tp.id }}">
+      <div class="td-img"><img src="/assets/img/research/{{ tp.image }}" alt="{{ tp.name.en }}" loading="lazy" width="800" height="597"></div>
+      <div>
+        <span class="td-label bg-{{ tp.color }}"><svg class="ic" aria-hidden="true"><use href="#i-{{ tp.icon }}"/></svg>{{ tp.name.ko }}</span>
+        <h2 class="td-title">{{ tp.name.en }}</h2>
+        <p class="td-q">{{ tp.question | t | safe }}</p>
+        <p class="td-sum">{{ tp.summary | t | safe }}</p>
+        {% if tp.keywords %}<div class="td-keywords">{% for k in tp.keywords %}<span>{{ k }}</span>{% endfor %}</div>{% endif %}
+        {% if related.length %}
+        <div class="td-pubs">
+          <h4><span class="l-ko">관련 논문</span><span class="l-en">Related Publications</span></h4>
+          <ul>
+            {%- for p in related %}
+            <li><b>{{ p.venue_short }}</b>{% if p.url %}<a href="{{ p.url }}" target="_blank" rel="noopener">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}</li>
+            {%- endfor %}
+          </ul>
+          <p style="margin-top:8px"><a class="text-link" href="/publications/#topic={{ tp.id }}"><span class="l-ko">이 주제의 논문 모두 보기</span><span class="l-en">All papers on this topic</span> <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></p>
+        </div>
+        {% endif %}
+        {% if tp.links %}
+        <div class="td-links">{% for l in tp.links %}<a class="chip" href="{{ l.url }}" target="_blank" rel="noopener">{{ l.label }} <svg class="ic" aria-hidden="true"><use href="#i-ext"/></svg></a>{% endfor %}</div>
+        {% endif %}
+      </div>
+    </article>
+    {%- endfor %}
+
+    <div class="card open-card">
+      <img src="/assets/img/research/more.jpg" alt="" loading="lazy" width="800" height="533">
+      <div>
+        <h3>{{ research.open_note | t | safe }}</h3>
+        <p><span class="l-ko">관심 있는 주제가 있다면 편하게 이야기해 주세요.</span><span class="l-en">Have an idea? We'd love to hear it.</span>
+          <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    {{ ui.secTab("만드는 것 · 연구 방법", "How We Work") }}
+    <div class="card pills-grid">
+      <div>
+        <p class="pills-title t-build">{{ research.build.title.en }}<small>{{ research.build.title.ko }}</small></p>
+        <ul class="pills">{% for i in research.build.items %}<li class="chip p-build">{{ i.en }} <small>{{ i.ko }}</small></li>{% endfor %}</ul>
+      </div>
+      <div>
+        <p class="pills-title t-methods">{{ research.methods.title.en }}<small>{{ research.methods.title.ko }}</small></p>
+        <ul class="pills">{% for i in research.methods.items %}<li class="chip p-methods">{{ i.en }} <small>{{ i.ko }}</small></li>{% endfor %}</ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+{%- set past = research.topics | whereStatus("past") %}
+{% if past.length %}
+<section class="section">
+  <div class="container">
+    {{ ui.secTab("이전 연구", "Previous Research") }}
+    <div class="past-grid topic-grid">
+      {%- for tp in past %}
+      <article class="topic-card c-{{ tp.color }}" id="{{ tp.id }}">
+        <header class="topic-head"><svg class="ic" aria-hidden="true"><use href="#i-{{ tp.icon }}"/></svg><h3>{{ tp.name.en }}</h3><span class="topic-ko">{{ tp.name.ko }}</span></header>
+        <div class="topic-body">
+          <p class="topic-q">{{ tp.question | t | safe }}</p>
+          <p class="topic-sum">{{ tp.summary | t | safe }}</p>
+          <a class="text-link" href="/publications/#topic={{ tp.id }}"><span class="l-ko">관련 논문 보기</span><span class="l-en">Related papers</span> <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}

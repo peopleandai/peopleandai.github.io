@@ -1,0 +1,156 @@
+# =====================================================================
+#  연구 (Research)
+#  - vision: 연구 비전 문장 + 핵심 가치
+#  - topics: 연구 주제 카드. 새 주제는 블록을 복사해서 추가하세요.
+#      id     : 영문 소문자 고유 이름 (publications.yml의 topics와 연결됩니다)
+#      status : ongoing(진행 중) | past(이전 연구)
+#      color  : green | red | navy | blue | yellow  (카드 머리 색)
+#      image  : src/assets/img/research/ 폴더 안 이미지 파일
+# =====================================================================
+
+vision:
+  en: "We ask not only whether AI systems work, but also whether people can <em class='hl-y'>use them effectively</em>, <em class='hl-g'>build meaningful relationships</em> with them, and <em class='hl-r'>live well alongside them</em>."
+  ko: "AI가 ‘잘 작동하는가’를 넘어, 사람들이 AI를 잘 활용하고, 의미 있는 관계를 맺으며, 함께 잘 살아갈 수 있는가를 묻습니다."
+
+values:
+  - icon: user
+    color: yellow
+    en: User Friendly
+    ko: 사용 편의성
+  - icon: responsible
+    color: green
+    en: Responsible
+    ko: 책임성
+  - icon: heart
+    color: red
+    en: Trustworthy
+    ko: 신뢰성
+  - icon: bulb
+    color: blue
+    en: Explainable
+    ko: 설명 가능성
+  - icon: scale
+    color: navy
+    en: Fair
+    ko: 공정성
+
+open_note:
+  ko: "이 밖에도 <strong>인간과 AI의 상호작용 경험에 관한 다양한 주제</strong>에 열려 있어요!"
+  en: "We are also open to <strong>many other topics on human–AI interaction experiences</strong>!"
+
+topics:
+  - id: evaluation
+    status: ongoing
+    color: green
+    icon: clipboard
+    image: evaluation.jpg
+    name:
+      en: AI Evaluation
+      ko: AI 평가
+    question:
+      en: How can we align AI evaluations with human preferences?
+      ko: AI 평가를 사람의 선호와 어떻게 맞출 수 있을까요?
+    summary:
+      ko: AI 모델 평가에 인간의 선호와 판단을 어떻게 반영할 수 있을지 연구합니다.
+      en: We design human-in-the-loop, LLM-based evaluation methods and tools that help practitioners assess AI outputs in line with human judgment.
+    keywords: [LLM-as-a-Judge, Human-in-the-loop, Evaluation Tools]
+    links:
+      - label: EvalAssist
+        url: https://ibm.github.io/eval-assist/
+
+  - id: hallucination
+    status: ongoing
+    color: red
+    icon: alert
+    image: hallucination.jpg
+    name:
+      en: AI Hallucination & Trust
+      ko: AI 환각과 신뢰
+    question:
+      en: How can interfaces help people calibrate their trust in AI, rather than over-relying on it?
+      ko: 사람들이 AI를 과신하지 않고 적절히 신뢰하도록 인터페이스가 어떻게 도울 수 있을까요?
+    summary:
+      ko: AI가 사실과 다른 정보를 생성할 때, 사람들이 AI를 얼마나 신뢰해야 할지 판단하도록 돕는 인터페이스를 설계합니다.
+      en: We study how AI-generated information can be presented so that people understand uncertainty and factuality and calibrate their trust.
+    keywords: [Factuality, Explainability, Trust Calibration, Over-reliance]
+
+  - id: disclosure
+    status: ongoing
+    color: navy
+    icon: eye
+    image: disclosure.jpg
+    name:
+      en: AI Disclosure
+      ko: AI 활용 공개
+    question:
+      en: When and how should AI involvement be communicated in AI-assisted work?
+      ko: AI가 함께 만든 작업물에서, AI 활용 사실을 언제 어떻게 알려야 할까요?
+    summary:
+      ko: AI 생성물과 인간 창작물의 경계가 모호해지는 환경에서, AI 활용 사실을 언제, 어떻게 공개해야 하는지 연구합니다.
+      en: As AI-generated and human-made content become hard to tell apart, we investigate how AI use should be disclosed, and how ownership and accountability should be defined.
+    keywords: [Transparency, Attribution, Ownership, Accountability]
+    links:
+      - label: CHIWORK '25 Workshop
+        url: https://chiwork-aidisclosure.github.io/
+      - label: AI Attribution Toolkit
+        url: https://aiattribution.github.io/
+
+  - id: agent
+    status: ongoing
+    color: blue
+    icon: robot
+    image: agent.jpg
+    name:
+      en: AI Agent Design
+      ko: AI 에이전트 설계
+    question:
+      en: How can people effectively oversee, understand, and stay in control of AI agents and their actions?
+      ko: 사람이 AI 에이전트의 행동을 효과적으로 감독하고, 이해하고, 통제하려면 어떻게 해야 할까요?
+    summary:
+      ko: AI 에이전트의 행동을 사람이 어떻게 효과적으로 감독하고 이해하며 통제할 수 있을지 연구합니다.
+      en: We explore oversight, transparency, governance, and human control over agentic AI systems and their actions.
+    keywords: [Human Oversight, Agent Governance, Human Control]
+
+  - id: conversation
+    status: past
+    color: yellow
+    icon: chat
+    image: conversation.jpg
+    name:
+      en: Conversational Agents & Interfaces
+      ko: 대화형 에이전트와 인터페이스
+    question:
+      en: How can conversational agents improve communication and collaboration?
+      ko: 대화형 에이전트는 어떻게 소통과 협업을 도울 수 있을까요?
+    summary:
+      ko: 그룹 대화를 돕는 대화형 에이전트, 자연어 인터페이스의 그라운딩(grounding) 등 사람과 AI의 대화 경험을 설계해 왔습니다.
+      en: We have designed conversational agents that facilitate group discussions and natural-language interfaces that ground human-AI collaboration.
+    keywords: [Conversational Agents, Group Chat, Natural Language Interfaces]
+
+build:
+  title:
+    en: What We Build
+    ko: 만드는 것
+  items:
+    - en: Human-Centered AI Systems & Tools
+      ko: 인간 중심 AI 시스템 및 도구
+    - en: Datasets
+      ko: 데이터셋
+    - en: User Interfaces
+      ko: 유저 인터페이스
+    - en: Prototypes & Designs
+      ko: 프로토타입 & 디자인
+
+methods:
+  title:
+    en: Research Methods
+    ko: 연구 방법
+  items:
+    - en: User Studies
+      ko: 유저 스터디
+    - en: Participatory Design
+      ko: 참여형 디자인
+    - en: Behavioral Experiments
+      ko: 행동 실험
+    - en: Interviews & Surveys
+      ko: 인터뷰 & 설문조사

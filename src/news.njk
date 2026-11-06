@@ -1,0 +1,20 @@
+---
+layout: base.njk
+permalink: /news/
+pageClass: news
+title:
+  ko: 소식
+  en: News
+---
+{% import "macros.njk" as ui %}
+{{ ui.pageHero({ko: "News", en: "News"}, {ko: "소식", en: "News"}, {ko: "PANDA Lab의 새로운 소식을 전합니다.", en: "What's new at PANDA Lab."}) }}
+
+<section class="section news-page">
+  <div class="container">
+    <div class="card panel">
+      <ul class="news-list">
+        {%- for n in news | sortNews %}{{ ui.newsItem(n) }}{% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>

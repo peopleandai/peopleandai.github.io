@@ -1,0 +1,61 @@
+---
+layout: base.njk
+permalink: /people/
+pageClass: people
+title:
+  ko: 구성원
+  en: People
+---
+{% import "macros.njk" as ui %}
+{{ ui.pageHero({ko: "People", en: "People"}, {ko: "구성원", en: "People"}, {ko: "PANDA Lab을 함께 만들어 가는 사람들입니다.", en: "The people who make PANDA Lab."}) }}
+
+{%- set pi = people.pi %}
+<section class="section">
+  <div class="container">
+    {{ ui.secTab("지도교수", "Principal Investigator") }}
+    <article class="card pi">
+      <div class="pi-photo"><img src="/assets/img/people/{{ pi.photo }}" alt="{{ pi.name.en }}" width="600" height="708"></div>
+      <div>
+        <h2 class="pi-name">{{ pi.name.ko }}<small>{{ pi.name.en }}</small></h2>
+        <p class="pi-title">{{ pi.title | t | safe }}</p>
+        <p class="pi-bio">{{ pi.bio | t | safe }}</p>
+        <div class="pi-links">
+          <a href="mailto:{{ pi.email }}"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg>{{ pi.email }}</a>
+          {%- for l in pi.links %}
+          <a href="{{ l.url }}" target="_blank" rel="noopener">{{ l.label }} <svg class="ic" aria-hidden="true"><use href="#i-ext"/></svg></a>
+          {%- endfor %}
+        </div>
+        <div class="timeline">
+          <h3><span class="l-ko">학력 · 경력</span><span class="l-en">Education &amp; Career</span></h3>
+          <ul>
+            {%- for c in pi.career %}
+            <li class="dot-{{ c.color }}"><b>{{ c.role | t | safe }}</b> · <span class="org">{{ c.org | t | safe }}</span>{% if c.period %}<span class="period">{{ c.period }}</span>{% endif %}</li>
+            {%- endfor %}
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    {%- for g in people.groups %}
+    {% if g.members and g.members.length %}
+    <div class="group" id="{{ g.id }}">
+      <h2>{{ g.title | t | safe }}</h2>
+      <div class="member-grid">{% for m in g.members %}{{ ui.member(m) }}{% endfor %}</div>
+    </div>
+    {% endif %}
+    {%- endfor %}
+
+    {% if (people.groups | memberCount) < 4 %}
+    <div class="card empty-team">
+      <div class="slots" aria-hidden="true">
+        <span class="bg-green">?</span><span class="bg-yellow">?</span><span class="bg-blue">?</span>
+      </div>
+      <div>
+        <h2><span class="l-ko">다음 멤버는 여러분일 수도 있어요!</span><span class="l-en">You could be our next member!</span></h2>
+        <p><span class="l-ko">학부연구생 · 석사과정 · 박사과정 학생을 모집하고 있습니다.</span><span class="l-en">We are recruiting undergraduate researchers, M.S., and Ph.D. students.</span>
+          <a href="/join/"><span class="l-ko">함께하기 →</span><span class="l-en">Join us →</span></a></p>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</section>

@@ -1,0 +1,56 @@
+---
+layout: base.njk
+permalink: /join/
+pageClass: join
+title:
+  ko: 함께하기
+  en: Join Us
+---
+{% import "macros.njk" as ui %}
+{{ ui.pageHero({ko: "Join Us", en: "Join Us"}, {ko: "함께하기", en: "Join Us"}, {ko: "사람과 AI의 더 나은 관계를 함께 연구할 학생을 찾습니다.", en: "We are looking for students to study better relationships between people and AI."}) }}
+
+<section class="section">
+  <div class="container">
+    <div class="card join-hero-box">
+      <div>
+        <h2>{{ join.headline | t | safe }}</h2>
+        <p class="intro">{{ join.intro | t | safe }}</p>
+        <ul class="positions">{% for p in join.positions %}<li class="chip">{{ p | t | safe }}</li>{% endfor %}</ul>
+      </div>
+      <a class="mail-big" href="mailto:{{ site.email }}?subject=%5BPANDA%20Lab%5D%20">
+        <svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg>
+        <strong>{{ site.email }}</strong>
+        <small><span class="l-ko">메일 보내기</span><span class="l-en">Send an email</span></small>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="highlight-grid">
+      {%- set hlColors = ["green", "yellow", "blue"] %}
+      {%- for h in join.highlights %}
+      <article class="card highlight">
+        <span class="hl-ic bg-{{ hlColors[loop.index0 % 3] }}"><svg class="ic" aria-hidden="true"><use href="#i-{{ h.icon }}"/></svg></span>
+        <h3>{{ h.title | t | safe }}</h3>
+        <p>{{ h.text | t | safe }}</p>
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="card apply">
+      <h2>{{ join.apply.title | t | safe }}</h2>
+      <p>{{ join.apply.text | t | safe }}</p>
+      <ol class="steps">{% for i in join.apply.items %}<li><span>{{ i | t | safe }}</span></li>{% endfor %}</ol>
+      <div class="visit">
+        <p><svg class="ic" aria-hidden="true"><use href="#i-coffee"/></svg><span><span class="l-ko">커피챗·연구실 방문 환영:</span><span class="l-en">Coffee chats &amp; visits welcome:</span> {{ site.office | t | safe }}</span></p>
+        <p><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg><span>{{ site.address | t | safe }}</span></p>
+      </div>
+    </div>
+  </div>
+</section>

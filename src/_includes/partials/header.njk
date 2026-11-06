@@ -1,0 +1,28 @@
+<header class="site-header" data-header>
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="PANDA Lab home">
+      {% include "partials/wordmark.njk" %}
+    </a>
+
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <ul>
+        {%- for item in nav %}
+        {%- set active = (page.url == item.url) or (item.url != "/" and page.url.startsWith(item.url)) %}
+        <li><a href="{{ item.url }}"{% if active %} aria-current="page"{% endif %}>{{ item | t | safe }}</a></li>
+        {%- endfor %}
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" data-set-lang="ko" aria-label="한국어">KO</button>
+        <button type="button" data-set-lang="en" aria-label="English">EN</button>
+      </div>
+      <button class="menu-btn" type="button" aria-controls="site-nav" aria-expanded="false" data-menu-btn>
+        <svg class="ic ic-open" aria-hidden="true"><use href="#i-menu"/></svg>
+        <svg class="ic ic-close" aria-hidden="true"><use href="#i-close"/></svg>
+        <span class="sr-only">Menu</span>
+      </button>
+    </div>
+  </div>
+</header>
